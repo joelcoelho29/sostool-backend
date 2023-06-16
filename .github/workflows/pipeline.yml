@@ -19,5 +19,5 @@ jobs:
       - name: Build
         run: |
           echo "Compiling the code..."
-          mvn clean install compile spring-boot:run -DskipTests 
+          mvn clean install -DskipTests -f pom.xml
           echo "Compile complete."
