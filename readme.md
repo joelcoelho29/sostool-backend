@@ -50,5 +50,30 @@ http://localhost:8081/workspace
 ```
 Esta é a URL padrão para acesso local à aplicação Spring Boot. No entanto, se você modificou a configuração de porta no arquivo *application.properties*, utilize a porta configurada em seu ambiente.
 
+## Construindo a imagem
+
+Para construir a imagem Docker do backend, execute o seguinte comando na raiz do projeto:
+
+```docker build -t docker_backend .```
+
+
+Isso irá construir a imagem com o nome `docker_backend` usando o Dockerfile fornecido.
+
+## Executando o contêiner
+
+Para executar o contêiner Docker do backend, use o seguinte comando:
+
+```docker run --name docker_backend -d -p 8081:8081 docker_backend```
+
+
+Isso irá iniciar um contêiner com o nome `docker_backend` usando a imagem `docker_backend` previamente construída. O aplicativo dentro do contêiner será executado na porta 8081, que será mapeada para a porta 8081 do host.
+
+Certifique-se de que as portas necessárias não estejam sendo usadas por outros aplicativos em sua máquina.
+
+---
+
+Agora você pode construir a imagem Docker e executar o contêiner para rodar o backend da sua aplicação. Divirta-se!
+
+
 ## Conclusão
 Agora você sabe como configurar e executar este projeto Java Spring Boot. Se tiver dúvidas ou encontrar problemas, consulte a documentação do Spring Boot em https://spring.io/projects/spring-boot.
