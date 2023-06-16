@@ -33,13 +33,13 @@ Navegue até o diretório raiz do projeto.
 
 Execute o seguinte comando:
 ```bash
-mvn spring-boot:run
+mvn clean install compile spring-boot:run
 ```
 O Maven irá compilar o projeto, baixar as dependências necessárias e iniciar a aplicação. Verifique a saída do console para ver se a aplicação foi iniciada com sucesso.
 
 Caso ainda não tenha o maven instalado, você pode tentar iniciar o projeto rodando o seguinte comando:
 ```bash
-.\mvn spring-boot:run
+.\choco install maven
 ```
 
 ### Acessando a Aplicação
