@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.Set;
@@ -31,6 +32,7 @@ public class AppUser implements Serializable {
     @Column(unique = true)
     @NotEmpty(message = "Campo email é obrigatório")
     @Length(max = 70, message = "O email deve ter no máximo 30 caracteres")
+    @Email
     private String email;
 
     @Length(max=200, message = "Senhas de até 200 caracteres")
